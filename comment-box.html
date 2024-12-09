@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Comment</title>
+  </head>
+  <body>
+    <h1>Please add Your comment</h1>
+    <div id="comment-container">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae id
+        tempora quae velit ut ad, eveniet consectetur voluptate a doloribus
+        dolore nobis rem recusandae similique repellat ipsam ab sunt sit quod
+        labore vero consequuntur ipsa. Velit beatae similique excepturi alias
+        magni, necessitatibus, illum qui repellat perferendis delectus, quam
+        quas ea?
+      </p>
+      <p>
+        Expedita vitae perferendis nobis id dicta earum, commodi amet cumque
+        suscipit, incidunt harum molestias nisi quasi obcaecati rem labore ea
+        sed unde mollitia ab! Amet ab ipsa perferendis adipisci minima quos
+        exercitationem, laborum quae animi. Esse ipsa quo voluptates sit, earum,
+        aut natus odio quidem explicabo est repellendus quasi nostrum?
+      </p>
+      <p>
+        Corrupti harum ab laudantium iusto accusamus delectus exercitationem,
+        similique dicta fugiat sapiente sed. Labore architecto quidem in tenetur
+        sed nihil ratione officiis, explicabo recusandae nobis molestias
+        consequatur dignissimos deleniti maiores nemo impedit repudiandae
+        doloremque. Voluptatibus vel veniam ea ut amet obcaecati, nam architecto
+        esse exercitationem unde repudiandae beatae! Deserunt, reiciendis!
+      </p>
+    </div>
+    <div>
+      <textarea name="" id="new-comment" cols="60" rows="10"></textarea>
+      <br />
+      <button id="post">Post</button>
+    </div>
+    <script>
+      document.getElementById("post").addEventListener("click", function () {
+        // step: 2 get the comment
+        const commentBox = document.getElementById("new-comment");
+        const newComment = commentBox.value;
+
+        // step: 3 set the comment inside the comment container
+        const commentContainer = document.getElementById("comment-container");
+        const p = document.createElement("p");
+        p.innerText = newComment;
+        commentContainer.appendChild(p);
+
+        // step-4: Clear the text area.
+        commentBox.value = "";
+      });
+    </script>
+  </body>
+</html>

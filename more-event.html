@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Events</title>
+  </head>
+  <body>
+    <h1>Explore More Events</h1>
+    <button id="btn-more">Events</button>
+    <script>
+      let x = document.getElementById("btn-more");
+      x.addEventListener("click", first);
+      x.addEventListener("mouseover", second);
+      x.addEventListener("mouseout", third);
+
+      function first() {
+        console.log("Clicked!");
+      }
+      function second() {
+        console.log("Moused over!!");
+      }
+      function third() {
+        console.log("Moused Out!!");
+      }
+    </script>
+  </body>
+</html>
